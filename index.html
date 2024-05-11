@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="https://api.gazerecorder.com/GazeCloudAPI.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Eye Tracker</title>
+</head>
+
+<body>
+    <div id="home-page">
+        <div className="home">
+            <h1>Welcome to eye tracker</h1>
+            <div class="calib-comp" id="calib-comp">Calibration completed</div>
+            <button onclick="startEyeTracking()" id="start-calib">Start Calibration</button>
+            <button type="button" onclick="goToEyeTracker()" id="go-to-eye-tracker" style="display: none;">Go to eye
+                tracker</button>
+        </div>
+    </div>
+    <div id="eye-tracker-page">
+        <div class="parent" id="parent1">
+            <div class="grid" id="grid1"></div>
+            <div class="text" id="text">Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                publishing
+                industries
+                for previewing layouts and visual mockups.</div>
+            <div class="start" onclick="startTracker()">Start</div>
+            <div class="end" onclick="goToGazePath()">End</div>
+            <!-- <div class="gaze-point" id="gaze-point"></div> -->
+        </div>
+    </div>
+    <div id="gaze-path-page">
+        <div class="parent" id="parent2">
+            <canvas id="canvas" class="canvas"></canvas>
+            <div class="grid" id="grid2"></div>
+            <div class="text after" id="text">Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                publishing industries
+                for previewing layouts and visual mockups.</div>
+        </div>
+    </div>
+</body>
+
+</html>

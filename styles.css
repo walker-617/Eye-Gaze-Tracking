@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+.parent {
+    position: relative;
+    height: 100vh;
+    width: 100vw; 
+    overflow: hidden;
+}
+
+.start{
+    position: absolute;
+    top:0;
+    background-color: rgba(73, 208, 68, 0.659);
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.start:hover{
+    background-color: rgba(128, 128, 128, 0.582);
+}
+
+.end{
+    position: absolute;
+    top:0;
+    right: 0;
+    background-color: rgba(208, 68, 68, 0.659);
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.end:hover{
+    background-color: rgba(128, 128, 128, 0.582);
+}
+
+.grid {
+    display: grid;
+    height: 100vh;
+    width: 10vw;
+}
+
+.grid div[class^="grid-item"]{
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.after{
+    opacity: 0.3;
+}
+
+.fixation-points{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    z-index: 20;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixation-times{
+    position: absolute;
+    z-index: 100;
+    font-size: 15px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 0 5px 5px 5px;
+}
+
+.coordinates {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.canvas{
+    position: absolute;
+}
+
+.text{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 60px;
+    width: 80%; 
+    color: black;
+    line-height: 60px;
+}
+
+.calib-comp{
+    color: green;
+    display: none;
+}
+
+.gaze-point{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 10px;
+    z-index: 100;
+}
